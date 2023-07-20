@@ -1,0 +1,10 @@
+.card-footer {
+    padding: 0;
+}
+
+.custom-image {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+    object-position: 25% 25%;
+}

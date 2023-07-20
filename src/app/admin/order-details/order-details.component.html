@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col col-6">
+        <div *ngIf="orderDetails">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Order Details</h5>
+                    <table class="table">
+                        <thead></thead>
+                        <tbody>
+                            <tr>
+                                <td> Date Place</td>
+                                <td> {{orderDetails.datePlaced | date}}</td>
+                            </tr>
+                            <tr>
+                                <td> Name</td>
+                                <td> {{orderDetails.shipping.name}}</td>
+                            </tr>
+                            <tr>
+                                <td> City</td>
+                                <td> {{orderDetails.shipping.city}}</td>
+                            </tr>
+                            <tr>
+                                <td> Address Line 1</td>
+                                <td> {{orderDetails.shipping.addressLine1}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col col-6">
+        <shopping-cart-summary [cart]="cart">
+
+        </shopping-cart-summary>
+    </div>
+</div>
